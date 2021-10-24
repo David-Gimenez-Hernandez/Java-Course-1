@@ -1,0 +1,11 @@
+class Recursión{
+  //PRE: x>=0, x pretenece a Z
+  static int factorial(int x){
+    if(x<2) return 1;
+    else return x*factorial(x-1);
+  }
+  public static void main(String[]args){
+   int x = StdIn.readInt()
+     system.out.println(x);
+  }
+}

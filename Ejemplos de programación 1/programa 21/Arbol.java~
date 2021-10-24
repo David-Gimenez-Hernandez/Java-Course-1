@@ -1,0 +1,60 @@
+/*
+ * Arbol.java
+ * 
+ * Nombre y Apellidos:David Gimenez Hernandez 
+ * nº matricula:210311
+ *
+ * Fecha: 19/10/2020
+ */ 
+
+
+// Implementa en java el código de los siguientes procedimientos
+class Arbol{
+  
+  //PROCEDIMIENTO: imprime(Entero n) 
+  //PRE: x>=3
+  //POS: Imprime en pantalla un árbol de asteriscos de n filas
+  //     de copa y su correspondiente base que quede proporcionada
+  static void base(int y){
+      for (int i =1;i<=(y/3);i++){//divide el tronco entre 3 para hacerlo proporcional
+    System.out.print(" ");
+    }// de for
+    for (int i =1;i<(y/3);i++){//divide el tronco entre 3 para hacerlo proporcional
+      System.out.print("*");
+    }//de for
+  }// de base
+  
+  
+  static void copa(int n){
+    int x=n-1;//numero de espacios inicial
+    int y=1;//numero de asteriscos inicial
+    for (int i=1;i<=n;i++){
+      for (int j=1; j<=x;j++){
+        System.out.print(" ");
+      }//de for
+      for (int j=1; j<=y;j++){
+        System.out.print("*");
+      }//de for
+      x--;  // resta de uno en uno porque los espacios disminuyen de 1 en 1
+      y+=2; // suma de dos en dos porque asteriscos aumentan de 2 en 2
+      System.out.println();
+    }//de for
+  }// de copa
+  
+  
+  static void arbol(int n){
+    copa (n);
+    base(y);
+    
+    }//de imprime
+  
+  
+  
+  
+
+  public static void main (String[] args) {
+    System.out.print("Introduce un tamaño > ");  
+    int n=StdIn.readInt();
+    arbol(n); //imprime un arbol de n filas de copa
+  }// de main
+} // de Arbol   
