@@ -1,0 +1,129 @@
+import java.util.Arrays;
+class CopiaMenores{
+
+/**
+Se pide una función que dados un array de enteros cualesquiera y un número entero, devuelva un
+nuevo array que contenga los elementos del array que son estrictamente menores que el número
+pasado como argumento. El array devuelto debe tener la longitud exacta para albergar los
+elementos menores, y estos deben aparecer en el mismo orden que en el array original.
+Ejemplo:
+arr={4,-3,2,8,1,-1,6,2}, num=5 ====> {4,-3,2,1,-1,2}
+*/
+
+
+
+  
+  static int[] copiaMenores (int[] arr, int num){
+    return null;      //BORRAD LA INSTRUCCIÓN return Y ESCRIBID AQUI CÓDIGO
+  }
+  
+
+
+//*******************NO TOQUEIS NADA DE AQUÍ EN ADELANTE ******************************************
+
+//+++++++++++++++++++++++++++++ METODOS PRIVADOS PARA PRUEBAS  
+  private static void checkCopiaMenores(int[] arr, int num, int[] arrSol){
+    try{
+      int[] arr0riginal=null;
+      arr0riginal=Arrays.copyOf(arr, arr.length); //el array se va a modificar, conservo copia original
+      System.out.println("+++++++++++++++");
+      System.out.println("ARRAY DE PRUEBA=  " + Arrays.toString(arr0riginal) + ", NUMERO PASADO COMO ARGUMENTO= " + num);
+      int[] arrSolAlumno = copiaMenores(arr,num);
+      System.out.println("El resultado esperado deberia ser " + Arrays.toString(arrSol));
+      System.out.println("y el resultado obtenido al llamar a tu metodo es " + Arrays.toString(arrSolAlumno));
+      if (arrSolAlumno == null){
+        System.out.println("Error: tu metodo copiaMenores devuelve un array null.");
+        System.out.println("Este tipo de error implica que la nota será un 0.");
+        throw new Error();
+      }
+      if (arrSolAlumno == arr){
+        System.out.println("Error: tu metodo copiaMenores no devuelve un array nuevo distinto del pasado como argumento.");
+        throw new Error();
+      } 
+      if (!Arrays.equals(arrSolAlumno,arrSol)){
+        System.out.println("Error: tu metodo copiaMenores no devuelve el array correcto (elementos correctos en el mismo orden que en el original)");
+        throw new Error();
+      } 
+      System.out.println("**********************************");
+    } catch (Exception e){
+      System.out.println(e.toString());
+      throw new Error("Error en test: el codigo del alumno produce una excepcion");
+    }
+    
+  }
+  
+  private static boolean sonPermutacion(int[] arr1, int[] arr2){
+    int[] arr1Aux= Arrays.copyOf(arr1,arr1.length);
+    int[] arr2Aux=Arrays.copyOf(arr2,arr2.length);
+    Arrays.sort(arr1Aux);
+    Arrays.sort(arr2Aux);
+    return Arrays.equals(arr1Aux,arr2Aux);    
+  }
+//++++++++++++++++++++++++++ FIN METODOS PRIVADOS PARA PRUEBAS  
+  
+  
+  public static void main(String[] args){
+    int[] errores={0,0,0,0};
+    {
+      int[] arr={};
+      int num= 5;
+      int[] arrSol={};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={4};
+      int num= 5;
+      int[] arrSol={4};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={6};
+      int num= 5;
+      int[] arrSol={};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={2,6,2,3,2,4,3};
+      int num= 5;
+      int[] arrSol={2,2,3,2,4,3};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={2,3,4,6};
+      int num= 5;
+      int[] arrSol={2,3,4};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={1,7,8,9};
+      int num= 5;
+      int[] arrSol={1};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={7,8,9,1};
+      int num= 5;
+      int[] arrSol={1};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={7,7,7,4,7,7};
+      int num= 5;
+      int[] arrSol={4};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={4,3,2,8,1,-1,-2};
+      int num= 5;
+      int[] arrSol={4,3,2,1,-1,-2};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    {
+      int[] arr={3,7,7,4,7,1};
+      int num= 5;
+      int[] arrSol={3,4,1};
+      checkCopiaMenores(arr,num,arrSol);
+    }
+    System.out.println("Test copiaMenores superado.");
+  }
+}

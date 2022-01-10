@@ -1,0 +1,108 @@
+/*
+ * Seleccion.java
+ * 
+ * Nombre y Apellidos: 
+ * nº matrícula:
+ * 
+ * Fecha: 13/10/2020
+ */ 
+
+
+// Implementa en java el código de las siguientes funciones
+// y completa el main incluyendo pruebas para cada una de ellas
+
+class Seleccion {   
+  
+  /**
+   * FUNCION min (Entero a, Entero b) --> Entero
+   * POST: Calcula el menor entre a y b.
+   * POST: (resultado IN {a,b}) /\ 
+   *       (resultado <= a) /\ (resultado <= b)
+   */ 
+  static int min (int a, int b)
+  {
+    if (a<=b) 
+      return a;
+    else
+      return b;
+  } // de min
+
+
+  /**
+   * FUNCION max (Entero a, Entero b) --> Entero
+   * PRE: cierta
+   * POST: Calcula el mayor entre a y b.
+   * POST: (resultado IN {a,b}) /\ 
+   *       (resultado >= a) /\ (resultado >= b)
+   */ 
+
+  
+  /**
+   * FUNCION max3 (Entero a, Entero b, Entero c) --> Entero
+   * PRE: cierta
+   * POST: Calcula el mayor entre a, b y c.
+   */ 
+
+   
+  /**
+   FUNCION posicionMayor (Entero posA, valorA, posB, valorB) 
+     --> Entero
+   PRE: posA>0, posB>0, posA=/=posB  
+   POST: Dados dos valores enteros valorA y valorB y sus 
+         posiciones respectivas, posA y posB, devolver 
+         la posicion del que sea mayor de los dos valores.
+           valorA >= valorB  --> posA
+           eoc               --> posB
+   EJEMPLOS: posicionMayor(1,4,2,8) --> 2
+             posicionMayor(1,4,2,-8) --> 1
+   */ 
+
+  
+  /**
+   FUNCION abs (Entero a) --> Entero
+   PRE: cierta
+   POST: Calcula el valor absoluto de a.
+  */ 
+ 
+  
+  /**
+   FUNCION ternaria (Booleano cond, Entero a, Entero b) --> Entero
+   PRE: cierta
+   POST: Si cond es true devuelve x, en otro caso devuelve y
+   EJEMPLOS: ternaria(true,1,2) --> 1
+             ternaria(false,1,2) --> 2
+  */ 
+
+   /**
+   FUNCION delta (Booleano p) 
+   POST: Si p es cierto devuelve 1 y si es falso devuelve 0
+   POST: p   --> 1
+         eoc --> 0
+  */ 
+
+  
+  public static void main(String [] args){
+    // Incluye aquí las pruebas que hagas para comprobar 
+    // que cada función devuelve los resultados esperados
+    //  para un conjunto representativo de casos
+    
+//    // PRUEBAS: min
+
+//    // PRUEBAS: max
+
+//    // PRUEBAS: max3
+         
+//    // PRUEBAS: posicionMayor
+
+//    // PRUEBAS: abs 
+
+//    // PRUEBAS ternaria: 
+
+//    // PRUEBAS delta: 
+   
+    
+  } // de main
+} // de Seleccion
+
+
+

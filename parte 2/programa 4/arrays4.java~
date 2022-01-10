@@ -1,0 +1,9 @@
+class arrays4{
+  static int posElem(int[] arr){
+    return posElemAux(arr, 0)
+  }//de posElem
+  static int posElemAux(int[] arr, int i){
+    return(i<arr.length-1)?
+  }//de posElemAux
+  public static void main(String[] args){}//de main
+}//de arrays4
